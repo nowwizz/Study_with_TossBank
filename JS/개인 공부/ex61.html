@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>61번</title>
+    <script>
+      let str = prompt();
+      let cnt = 0;
+      let newStr = "";
+      for (let i = 0; i < str.length; i++) {
+        if (str[i] != str[i + 1]) {
+          cnt++;
+          newStr += str[i] + cnt;
+          cnt = 0;
+        } else {
+          cnt++;
+        }
+      }
+      console.log(str);
+      console.log(newStr);
+    </script>
+  </head>
+  <body></body>
+</html>

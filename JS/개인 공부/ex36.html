@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>36번</title>
+    <script>
+      let scores = prompt().split(" ");
+      let count = scores.reduce((acc, cur) => {
+        if (acc[cur]) {
+          acc[cur] += 1;
+        } else {
+          acc[cur] = 1;
+        }
+        return acc;
+      }, {});
+      console.log(count);
+      let setScores = Object.keys(count);
+      let student = 0;
+      for (let i = 0; i < 3; i++) {
+        student += count[setScores.pop()];
+      }
+      console.log(student);
+    </script>
+  </head>
+  <body></body>
+</html>

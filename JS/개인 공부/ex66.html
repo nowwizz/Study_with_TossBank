@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>66번: 블럭탑쌓기</title>
+    <script>
+      let 탑 = ["ABCDEF", "BCAD", "ADEFQRX", "BEDFG", "EFGHZ"];
+      let 규칙 = "ABD";
+
+      for (let i = 0; i < 탑.length; i++) {
+        if (탑[i][0] == 규칙[0]) {
+          console.log("가능");
+        } else {
+          let res = "";
+          for (let j = 0; j < 탑[i].length; j++) {
+            if (규칙.includes(탑[i][j])) {
+              res += 탑[i][j];
+            }
+          }
+          if (res.length == 0) {
+            console.log("가능");
+          } else {
+            if (규칙.includes(res)) {
+              console.log("가능");
+            } else {
+              console.log("불가능");
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

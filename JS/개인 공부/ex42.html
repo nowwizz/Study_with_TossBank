@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>42번</title>
+    <script>
+      let days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      let day = ["WED", "THU", "FRI", "SAT", "SUN", "MON", "TUE"];
+      function solution(a, b) {
+        let sum = 0;
+        for (let i = 1; i < a; i++) {
+          sum += days[i];
+        }
+        sum += b;
+        console.log(sum);
+        console.log(day[(sum % 7) - 1]);
+      }
+
+      let A = Number(prompt());
+      let B = Number(prompt());
+
+      solution(A, B);
+    </script>
+  </head>
+  <body></body>
+</html>

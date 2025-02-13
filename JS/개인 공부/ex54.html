@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>54번</title>
+    <script>
+      let nums = prompt().split(" ");
+      for (let i = 0; i < nums.length - 1; i++) {
+        if (Number(nums[i]) != Number(nums[i + 1]) - 1) {
+          console.log("NO");
+          break;
+        }
+        if (i == nums.length - 2) {
+          console.log("YES");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

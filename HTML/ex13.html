@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <table width="500px" border="1px">
+      <thead>
+        <tr>
+          <!-- colspan으로 3칸 모두 차지하게 해야 함 -->
+          <td align="center" bgcolor="blue" colspan="3">
+            <font color="white">오늘의 수입/지출</font>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr align="center">
+          <td bgcolor="skyblue">내용</td>
+          <td bgcolor="skyblue">수입</td>
+          <td bgcolor="skyblue">지출</td>
+        </tr>
+        <tr>
+          <td align="center">월급</td>
+          <td align="right">1,000,000</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">점심값</td>
+          <td></td>
+          <td align="right">5,000</td>
+        </tr>
+        <tr>
+          <td align="center">부모님선물</td>
+          <td></td>
+          <td align="right">30,000</td>
+        </tr>
+        <tr align="center">
+          <td rowspan="3" bgcolor="skyblue">총계</td>
+          <td>수입</td>
+          <td>지출</td>
+        </tr>
+        <tr align="center">
+          <td>1,000,000</td>
+          <td>35,000</td>
+        </tr>
+        <tr align="center">
+          <td>남은돈</td>
+          <td>965,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

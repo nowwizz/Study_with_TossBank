@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>32번</title>
+    <script>
+      let str = prompt().split(" ");
+      let str1 = [];
+      for (let i = 0; i < str.length; i++) {
+        str1[i] = Number(str[i]);
+      }
+      let str2 = [];
+      for (let j = 0; j < str1.length; j++) {
+        str2[j] = str1[j];
+      }
+      str2.sort();
+      console.log(str1);
+      console.log(str2);
+      for (let k = 0; k < str1.length; k++) {
+        if (str1[k] != str2[k]) {
+          console.log("NO");
+          break;
+        }
+        if ((k = str1.length)) {
+          console.log("YES");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

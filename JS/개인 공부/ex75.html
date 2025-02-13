@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let x = "369";
+      let num = Number(prompt());
+      let cnt2 = 0;
+      for (let i = 1; i < num + 1; i++) {
+        let cnt1 = 0;
+        for (let j = 0; j < String(i).length; j++) {
+          if (x.includes(String(i)[j])) cnt1++;
+        }
+        if (cnt1 === String(i).length) cnt2++;
+      }
+      console.log(cnt2);
+    </script>
+  </head>
+  <body></body>
+</html>

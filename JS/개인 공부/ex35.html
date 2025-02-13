@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>35번</title>
+    <script>
+      let arr = prompt().split(" ");
+      let count = arr.reduce((acc, cur) => {
+        if (acc[cur]) {
+          acc[cur] += 1;
+        } else {
+          acc[cur] = 1;
+        }
+        return acc;
+      }, {});
+      console.log(count);
+
+      let winner = "";
+      let maxcount = 0;
+      for (name in count) {
+        if (count[name] > maxcount) {
+          maxcount = count[name];
+          winner = name;
+        }
+      }
+      console.log(`${winner}(이)가 총 ${maxcount}표로 반장이 되었습니다.`);
+    </script>
+  </head>
+  <body></body>
+</html>

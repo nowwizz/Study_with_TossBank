@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>64번</title>
+    <script>
+      let kg = Number(prompt());
+
+      for (let i = Math.floor(kg / 7); i > -1; i--) {
+        if ((kg - 7 * i) % 3 == 0) {
+          console.log(i + (kg - 7 * i) / 3);
+          break;
+        } else {
+          if (i == 0) {
+            console.log(-1);
+          }
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

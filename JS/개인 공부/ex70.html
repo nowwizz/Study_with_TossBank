@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function dot(a, b) {
+        let res = [];
+        if (a[0].length === b.length) {
+          for (let i = 0; i < a.length; i++) {
+            let row = [];
+            for (let j = 0; j < b[0].length; j++) {
+              let num = 0;
+              for (let k = 0; k < b.length; k++) {
+                num += a[i][k] * b[k][j];
+              }
+              row.push(num);
+            }
+            res.push(row);
+          }
+          return res;
+        } else {
+          console.log(-1);
+        }
+      }
+      let a = [
+        [1, 2],
+        [2, 4],
+        [3, 6],
+      ];
+
+      let b = [
+        [1, 0, 2],
+        [0, 3, 2],
+      ];
+
+      console.log(dot(a, b));
+    </script>
+  </head>
+  <body></body>
+</html>

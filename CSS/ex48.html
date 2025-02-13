@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- ex49 -->
+    <title>basis, grow, shrink 속성</title>
+    <!-- flex-basis - 유연한 박스의 기본 영역 -->
+    <!-- flex-basis : 기본값 auto -->
+    <!--            : auto - 아이템의 너비높이에 따라서 결정. 계속 늘어남 -->
+    <!--            : initial - 컨터이너 공간이 부족하면, 최소크기까지 줄임 -->
+    <!--            : 수치(100px, 50%) - 기본적인 너비/높이값 -->
+    <style>
+      .container {
+        width: 90%;
+        height: auto;
+        background-color: yellow;
+        border: 10px solid black;
+        padding: 10px;
+        display: flex;
+      }
+      .item {
+        width: auto;
+        height: 100%;
+        margin: 10px;
+        border: 10px solid black;
+        padding: 10px;
+        background-color: rgb(136, 219, 136);
+
+        /* auto 기본값:콘텐츠크기만큼*/
+        /* 중국어, 일본어, 한국어일 때는 영어와 다르게 적용됨 */
+        /* CJK는 글자 하나를 단어로 봄(덩어리라고 해야하나) */
+        /* 영어는 이어져 있으면(BBBBB) 이걸 하나의 덩어리로 봄 */
+        flex-basis: 100px;
+        /* 100px : 기본100px만큼 확보, 
+                 100px보다 크면 콘텐츠크기만큼  */
+        /* basis보다 width에 우선순위 */
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex-basis</h1>
+    <div class="container container1">
+      <div class="item"><h3>AAA</h3></div>
+      <div class="item"><h3>대한민국대한민국</h3></div>
+      <div class="item"><h3>CCC</h3></div>
+    </div>
+    <br />
+    <div class="container container1">
+      <div class="item"><h3>AAA</h3></div>
+      <div class="item"><h3>BBBBBBBBBBBBBBBB</h3></div>
+      <div class="item"><h3>CCC</h3></div>
+    </div>
+  </body>
+</html>

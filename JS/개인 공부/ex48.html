@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>48번</title>
+    <script>
+      //아스키코드로 변환법: charCodeAt()
+      //아스키코드에서 문자 변환법: String.fromCharCode(아스키코드);
+      let str = prompt();
+      let str2 = "";
+      for (s of str) {
+        let alp = s.charCodeAt(0);
+        if (alp >= 65 && alp <= 90) {
+          str2 += String.fromCharCode(alp + 32);
+        } else if (alp >= 97 && alp <= 122) {
+          str2 += String.fromCharCode(alp - 32);
+        }
+      }
+      console.log(str2);
+    </script>
+  </head>
+  <body></body>
+</html>

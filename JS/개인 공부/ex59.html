@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>59번</title>
+    <script>
+      let str = prompt();
+      let mid = Math.floor((50 - str.length) / 2);
+      let newStr = "";
+
+      for (i = 0; i < 50; i++) {
+        if (i == mid) {
+          newStr += str;
+          i += str.length - 1;
+        } else {
+          newStr += "=";
+        }
+      }
+      console.log(newStr);
+    </script>
+  </head>
+  <body></body>
+</html>

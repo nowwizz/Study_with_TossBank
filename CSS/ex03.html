@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>선택자 - 전체선택자, 태그선택자</title>
+    <!-- 
+    전체선택자: *
+    태그선택자: HTML 태그명(ex: h1, p)
+    -->
+    <style>
+      * {
+        color: brown;
+      }
+      h1 {
+        color: red;
+      }
+      /* 태그를 여러개 선택: 쉼표 사용 */
+      h2,
+      p {
+        background-color: yellow;
+      }
+      /* body: 화면 전체 */
+      body {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>제목태그 H1</h1>
+    <h2>제목태그 H2</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat molestias
+      nihil harum odio corporis sequi dicta omnis. Veniam ipsam dolore obcaecati
+      aut numquam cum, eveniet ipsum cupiditate minima? Fugit, repudiandae!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus rem
+      itaque tenetur libero. Aut alias velit repellat dolore cupiditate possimus
+      eveniet quod, ex ullam quam modi inventore vitae deleniti voluptas?
+    </p>
+  </body>
+</html>

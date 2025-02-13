@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>38번</title>
+    <script>
+      let limit = prompt("제한 무게: ");
+      let people = prompt("인원 수: ");
+      let kg = new Array();
+      for (let i = 0; i < Number(people); i++) {
+        kg[i] = Number(prompt());
+      }
+      let max = 0;
+      let cnt = 0;
+      for (let j = 0; j < Number(people); j++) {
+        if (max + kg[j] > Number(limit)) {
+          break;
+        }
+        cnt++;
+        max += kg[j];
+      }
+      console.log(max);
+      console.log(cnt);
+    </script>
+  </head>
+  <body></body>
+</html>

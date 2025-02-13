@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>형 변환: number 타입과 string 타입</title>
+    <script>
+      //number -> string : String()
+      let num1 = 456; //number
+      document.write(typeof num1 + num1 + "<br>");
+      let str1 = String(num1);
+      document.write(typeof str1 + str1 + "<br>");
+
+      //string -> number : Number()
+      let str2 = "123"; //아라비아 숫자 0~9이어야 함
+      let num2 = Number(str2);
+      document.write(typeof num2 + num2 + "<br>");
+
+      //이전 방법
+      let str3 = "264.45";
+      let num5 = parseInt(str3); //정수로 변환(소수점 제거)
+      document.write(typeof num5 + num5 + "<br>");
+      let num6 = parseFloat(str3); //실수로 변환
+      document.write(typeof num6 + num6 + "<br>");
+
+      //에러 발생
+      let str4 = "abc";
+      let num7 = parseInt(str4); //NaN(Not a Number) 값으로 처리됨
+      document.write(typeof num7 + num7 + "<br>");
+      //NaN 발생 예
+      //1. 숫자로 변환할 수 없는 값 "abc"
+      //2. 0으로 나누었을 때 10/0
+      //3. undefined에 연산할 때 undefined + 5
+      //4. 잘못된 수학연산 (음수의 제곱근) Math.sqrt(-1)
+      document.write(isNaN(num7) + "<br>"); //true NaN 값이 나옴
+
+      //예외적인 방법 (비추천)
+      let num3 = "789" * 1;
+      document.write(typeof num3 + num3 + "<br>");
+      let num4 = +"111";
+      document.write(typeof num4 + num4 + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

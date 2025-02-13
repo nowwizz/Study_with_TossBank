@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>69번: 골드바흐의 추측</title>
+    <script>
+      let num = Number(prompt());
+      let arr = [];
+      let res = [];
+      for (let i = 2; i < num; i++) {
+        let cnt = 0;
+        for (let j = 1; j < i + 1; j++) {
+          if (i % j === 0) {
+            cnt++;
+          }
+        }
+        if (cnt === 2) {
+          arr = [...arr, i];
+        }
+      }
+      for (i = 0; i < arr.length; i++) {
+        if (arr.includes(num - arr[i])) {
+          if (res.includes(arr[i])) break;
+          res = [...res, arr[i], num - arr[i]];
+        }
+      }
+      for (i = 0; i < res.length; i = i + 2) {
+        console.log(res[i], res[i + 1]);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

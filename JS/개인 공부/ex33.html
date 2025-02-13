@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>33번</title>
+    <script>
+      function one(n) {
+        function two(num) {
+          /* 빈칸을 입력하세요. */
+          let res = Math.pow(num, n);
+          return res;
+        }
+        return two;
+      }
+
+      const a = one(2); //내부 함수 two가 반환되어 a에 들어감
+      const b = one(3);
+      const c = one(4);
+
+      console.log(a(10)); //그래서 a(10) == two(10)(n이 2인)과 같아지는거임
+      console.log(b(10));
+      console.log(c(10));
+    </script>
+  </head>
+  <body></body>
+</html>

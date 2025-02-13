@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>주축방향 정렬 - justify-content</title>
+    <!-- 많이 사용됨 -->
+    <style>
+      .container {
+        background-color: #eee;
+        border: 1px solid #222;
+        margin-bottom: 10px;
+        /* 컨테이너를 flexbox로 변경 */
+        display: flex;
+      }
+      .box {
+        background-color: green;
+        margin: 5px;
+        padding: 5px 45px;
+      }
+      p {
+        color: white;
+        text-align: center;
+      }
+      .opt1 {
+        /* 기본값, 앞 방향 */
+        justify-content: start;
+      }
+      .opt2 {
+        /* 끝 방향 */
+        justify-content: end;
+      }
+      .opt3 {
+        /* 중앙 방향 */
+        justify-content: center;
+      }
+      .opt4 {
+        /* 양쪽 끝 컨텐츠가 컨테이너의 맨 끝으로 감 */
+        justify-content: space-between;
+      }
+      .opt5 {
+        /* 중앙 간격의 반만큼 양끝을 띄움 */
+        justify-content: space-around;
+      }
+      .opt6 {
+        /* 모든 간격을 같게 맞춤 */
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container opt1">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt2">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt3">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt4">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt5">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt6">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+  </body>
+</html>

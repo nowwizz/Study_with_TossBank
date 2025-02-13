@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>연습 문제</title>
+    <script>
+      //for문 사용
+      //1. 반복변수 i를 1부터 10까지 출력하시오.
+      for (let i = 1; i < 11; i++) {
+        document.write(i + " ");
+      }
+      document.write("<br>");
+      //2. 1부터 10사이의 홀수만 출력하시오.
+      for (i = 1; i < 11; i = i + 2) {
+        document.write(i + " ");
+      }
+      document.write("<br>");
+      //3. 1부터 10사이의 3의 배수만 출력하시오.
+      for (i = 1; i < 11; i = i * 3) {
+        document.write(i + " ");
+      }
+      document.write("<br>");
+      //4. 1부터 100까지의 합을 출력하시오.
+      let sum = 0;
+      for (i = 1; i < 101; i++) {
+        sum += i;
+      }
+      document.write("1부터 100까지의 합은 " + sum + "<br>");
+      //5. 1부터 6사이의 랜덤수 10개를 출력하시오.
+      for (i = 0; i < 10; i++) {
+        document.write(Math.floor(Math.random() * 6 + 1) + " ");
+      }
+      document.write("<br>");
+      //6. 1부터 100까지의 랜덤값을 100개 발생시키고, 그 중 가장 큰 수를 출력하시오.
+      let max = 0;
+      let num = 0;
+      for (i = 0; i < 100; i++) {
+        num = Math.floor(Math.random() * 100 + 1);
+        if (num > max) {
+          max = num;
+        }
+      }
+      document.write("가장 큰 수는 " + max);
+      document.write("<br>");
+
+      //7. 1부터 100까지의 소수의 갯수를 출력하시오.
+      //   소수 : 약수가 1과 자신인 수
+      //   약수 : 나누어 떨어지는 수
+      let M = 0;
+      for (i = 2; i < 101; i++) {
+        if (i == 2) {
+          document.write(i + " ");
+          M++;
+        } else {
+          for (let j = 2; j < i; j++) {
+            let res = i % j;
+            if (res == 0) {
+              break;
+            } else {
+              if (j == i - 1) {
+                document.write(i + " ");
+                M++;
+              }
+            }
+          }
+        }
+      }
+      document.write("<br>1부터 100까지의 소수의 개수는 " + M + "개");
+      document.write("<br>");
+      //8. 이번주 행운의 로또 숫자 6개를 출력하시오.
+      //   1부터 45까지의 랜덤한 수 6개를 뽑되
+      //   반복허용하지 않음. 재추첨 로직을 넣으시오.
+      let num1, num2, num3, num4, num5, num6;
+      let summ = [num1, num2, num3, num4, num5, num6];
+      for (i = 0; i < 6; i++) {
+        let N = Math.floor(Math.random() * 45 * 1);
+        while (1) {
+          if (summ.includes(N)) {
+            N = Math.floor(Math.random() * 45 * 1);
+          } else {
+            summ[i] = N;
+            break;
+          }
+        }
+      }
+      document.write(summ + "<br>");
+
+      //9. 주사위 2개 10번 던져서, 두 주사위 수를 합산한 다음
+      //   최소수와 최대수를 출력하시오.
+      let dice1 = 0;
+      let dice2 = 0;
+      let sum2 = 0;
+      let min2 = 0;
+      let max2 = 0;
+      for (i = 0; i < 10; i++) {
+        dice1 = Math.floor(Math.random() * 6 + 1);
+        dice2 = Math.floor(Math.random() * 6 + 1);
+        sum2 = dice1 + dice2;
+        if (i == 0) {
+          min2 = sum2;
+          max2 = sum2;
+        } else {
+          if (sum2 < min2) {
+            min2 = sum2;
+          } else if (sum2 > max2) {
+            max2 = sum2;
+          }
+        }
+      }
+      document.write("최소수: " + min2 + " 최대수: " + max2);
+    </script>
+  </head>
+  <body></body>
+</html>

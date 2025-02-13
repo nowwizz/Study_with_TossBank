@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>68번: 버스 시간표</title>
+    <script>
+      let BusTime = prompt().split(" ");
+      let NowTime = prompt().split(":");
+      let NowTime_N = Number(NowTime[0]) * 60 + Number(NowTime[1]);
+
+      for (let i = 0; i < BusTime.length; i++) {
+        let ex = BusTime[i].split(":");
+        let BusTime_N = Number(ex[0]) * 60 + Number(ex[1]);
+        let res = BusTime_N - NowTime_N;
+        if (res < 0) {
+          console.log("지나갔습니다");
+        } else {
+          console.log(`${Math.floor(res / 60)}시간 ${res % 60}분`);
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

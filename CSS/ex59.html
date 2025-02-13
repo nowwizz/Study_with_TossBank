@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>과제 - 다음 사이트</title>
+    <style>
+      body {
+        margin: 50px;
+      }
+      #kakaologo {
+        display: block;
+        width: 100px;
+        height: 78px;
+        margin: 0 auto;
+        background-size: 100px 80px;
+        text-align: center;
+      }
+      main {
+        border: 1px solid lightgray;
+        padding-top: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+      }
+      .input {
+        display: flex;
+        flex-direction: column;
+      }
+      .id {
+        padding: 9px 0;
+        width: 400px;
+        margin: 5px;
+        border: none;
+        border-bottom: 2px solid lightgray;
+      }
+      .pw {
+        padding: 9px 0;
+        width: 400px;
+        border: none;
+        border-bottom: 2px solid lightgray;
+      }
+      input.ck {
+        display: none;
+      }
+      .ck_label {
+        display: inline-block;
+        margin-top: 13px;
+        width: 20px;
+        height: 20px;
+        background-image: url(ico_comm.png);
+        background-repeat: no-repeat;
+        background-size: 150px 280px;
+        background-position: 0px -25px;
+        cursor: pointer;
+      }
+      input.ck:checked + .ck_label {
+        background-image: url(ico_comm.png);
+        background-repeat: no-repeat;
+        background-size: 150px 280px;
+        width: 20px;
+        height: 20px;
+        background-position: -25px -0px;
+      }
+      .ckbox {
+        display: flex;
+        padding-left: 15%;
+        text-align: center;
+      }
+      .buttonbox {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+      }
+      .button,
+      .button2 {
+        display: flex;
+        width: 400px;
+        height: 45px;
+        padding: 9px 0;
+        align-items: center;
+        justify-content: center;
+        background-color: #fae100;
+        border-radius: 3px;
+        border: none;
+        margin: 10px;
+      }
+      .button2 {
+        background-color: rgb(235, 234, 234);
+      }
+      footer {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        flex-direction: column;
+        color: gray;
+      }
+      .daumnet_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(235, 234, 234);
+        width: 400px;
+        align-self: center;
+        border-radius: 3px;
+        margin-bottom: 40px;
+      }
+      .daumnet {
+        width: 300px;
+        padding-top: 5px;
+        padding-left: 20px;
+      }
+      .join {
+        font-size: 12px;
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+        align-self: center;
+        margin-bottom: 50px;
+      }
+      .line {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 400px;
+        font-size: 11px;
+        color: gray;
+        margin: 8px;
+      }
+      .line::before,
+      .line::after {
+        content: "";
+        flex: 1;
+        border: 1px solid lightgray;
+        transform: scaleY(0.00002);
+      }
+      .line::before {
+        margin-right: 10px;
+      }
+      .line::after {
+        margin-left: 10px;
+      }
+      .kakaolink {
+        margin-top: 10px;
+      }
+      .kakaolink a:link {
+        text-decoration: none;
+        color: gray;
+      }
+      .kakaolink a:visited {
+        text-decoration: none;
+        color: gray;
+      }
+      .notice {
+        background-image: url(ico_comm.png);
+        background-repeat: no-repeat;
+        background-size: 150px 280px;
+        width: 20px;
+        height: 20px;
+        background-position: -129px -144px;
+        margin-left: 4px;
+        margin-top: 13.5px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img id="kakaologo" src="logo_kakao.png" alt="카카오 로고" />
+    </header>
+    <main>
+      <div class="input">
+        <div class="box">
+          <input
+            class="id"
+            type="text"
+            placeholder="카카오메일 아이디, 이메일, 전화번호"
+          />
+        </div>
+        <div class="box">
+          <input class="pw" type="password" placeholder="비밀번호" />
+        </div>
+        <div class="ckbox">
+          <input class="ck" type="checkbox" id="ckk" />
+          <label class="ck_label" for="ckk"></label>
+          <p style="display: inline; color: rgb(104, 103, 103); font-size: 14px; margin-left: 8px;">
+            간편로그인 정보 저장
+          </p>
+          <span class="notice"></span>
+        </div>
+        <div class="box buttonbox">
+          <button class="button">로그인</button>
+          <div class="line">
+            <span>또는</span>
+          </div>
+          <button class="button2">QR코드 로그인</button>
+        </div>
+        <div class="join">
+          <a>회원가입</a>
+          <div style="display: inline">
+            <a>계정찾기  </a>
+            <p
+              style="
+                display: inline;
+                color: rgb(227, 227, 227);
+                font-size: 12px;
+              "
+            >
+              |
+            </p>
+            <a>  비밀번호 찾기</a>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <div class="daumnet_div">
+          <a href="https://www.daum.net">
+            <img
+              class="daumnet"
+              src="https://accounts.kakaocdn.net/images/img_bnr_ko.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <a>한국어 <p style="display: inline; color: gray;">&#x2228</p></a>
+        <p style="display: inline; color: rgb(227, 227, 227); font-size: 12px">
+          |
+        </p>
+        <a>이용약관</a>
+        <p style="display: inline; color: rgb(227, 227, 227); font-size: 12px">
+          |
+        </p>
+        <a style="color: rgb(96, 96, 96);"><b>개인정보 처리방침</b></a>
+        <p style="display: inline; color: rgb(227, 227, 227); font-size: 12px">
+          |
+        </p>
+        <a>고객센터</a>
+      </div>
+      <div class="kakaolink">
+        <a href="https://www.kakaocorp.com/page/">ⓒ Kakao Corps.</a>
+      </div>
+    </footer>
+  </body>
+</html>

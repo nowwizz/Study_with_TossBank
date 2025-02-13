@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>41번</title>
+    <script>
+      let num = Number(prompt());
+      if (num == 1) {
+        console.log("소수가 아님");
+      } else if (num == 2) {
+        console.log("소수임");
+      } else {
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            console.log("소수가 아님");
+            break;
+          }
+          if (num - 1 == i) {
+            console.log("소수임");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

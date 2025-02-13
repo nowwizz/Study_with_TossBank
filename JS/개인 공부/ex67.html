@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>67번: 민규의 악수</title>
+    <script>
+      let cnt = Number(prompt());
+      let i = 1;
+      let mingyu = 0;
+      while (1) {
+        if ((i * (i - 1)) / 2 < cnt) {
+          i++;
+        } else {
+          i--;
+          break;
+        }
+      }
+      mingyu = cnt - (i * (i - 1)) / 2;
+      console.log(mingyu, i + 1);
+    </script>
+  </head>
+  <body></body>
+</html>

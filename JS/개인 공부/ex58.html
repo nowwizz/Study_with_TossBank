@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>58번</title>
+    <script>
+      let str = prompt();
+      let newStr = "";
+      let j = 0;
+      for (let i = str.length - 1; i > -1; i--) {
+        newStr += str[j];
+        j++;
+        if (i % 3 == 0 && i > 0) {
+          newStr += ",";
+        }
+      }
+      console.log(newStr);
+    </script>
+  </head>
+  <body></body>
+</html>

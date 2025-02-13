@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>레스토랑 예약하기</h1>
+    <form>
+      <fieldset style="width: 300px">
+        <legend>예약자 정보</legend>
+        <label for="search1">예약자:</label>
+        <input type="text" id="search1" /><br />
+        <label for="search2">연락처:</label>
+        <input
+          type="text"
+          value="000-0000-0000"
+          id="search2"
+          style="color: gray"
+          onfocus="this.value='';this.style.color='black'"
+        /><br />
+        <label for="search3">예약인원:</label>
+        <select>
+          <option>2명</option>
+          <option>3명</option>
+          <option>4명</option>
+          <option>5명 이상</option>
+        </select>
+      </fieldset>
+      <br />
+      <br />
+      <fieldset style="width: 300px">
+        <legend>일자 선택 및 시간 선택</legend>
+        <input type="date" />
+        <input type="time" />
+      </fieldset>
+      <br />
+      <br />
+      <button>예약</button>
+      <button>취소</button>
+    </form>
+  </body>
+</html>

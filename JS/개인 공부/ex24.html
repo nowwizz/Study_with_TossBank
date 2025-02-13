@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>24번</title>
+    <script>
+      let str = prompt();
+      let arr1 = [
+        "수성",
+        "금성",
+        "지구",
+        "화성",
+        "목성",
+        "토성",
+        "천왕성",
+        "해왕성",
+      ];
+      let arr2 = [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune",
+      ];
+      let idx = arr1.find((item, index, array) => {
+        if (item === str) {
+          console.log(arr2[index]);
+        }
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

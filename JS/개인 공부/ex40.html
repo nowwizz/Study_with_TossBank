@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>40번</title>
+    <script>
+      var names = ["장미", "수선화", "코스모스", "히비스커스"];
+      let max = 0;
+      let maxname = "";
+      names.forEach((name) => {
+        if (max < name.length) {
+          max = name.length;
+          maxname = name;
+        }
+      });
+      console.log(maxname);
+    </script>
+  </head>
+  <body></body>
+</html>
