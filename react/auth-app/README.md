@@ -11,11 +11,11 @@
 /auth-app
 ├── src
 │ ├── components
-│ │ ├── AuthProvider.js
+│ │ ├── AuthProvider.jsx
 │ ├── pages
-│ │ ├── Dashboard.js << 첫 화면
-│ │ ├── Signup.js
-│ │ ├── Login.js
-│ ├── App.js
+│ │ ├── Dashboard.jsx 첫 화면
+│ │ ├── Signup.jsx
+│ │ ├── Login.jsx
+│ ├── App.jsx
 ├── package.json
-├── index.js
+├── main.jsx
